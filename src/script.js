@@ -62,7 +62,7 @@ function updateResult(targetDay) {
     // Atualiza o texto com o emoji centralizado
     resultDiv.innerHTML = `
         <div class="emoji">${emoji}</div>
-        <div>${daysLeft === 0 ? 'Façam o pix imediatamente!' : `Faltam ${daysLeft} dias para o próximo evento`}</div>
+        <div>${daysLeft === 0 ? 'Façam o pix imediatamente!' : `Faltam ${daysLeft} dias para o pagode`}</div>
     `;
     resultDiv.style.display = "block";
 }
