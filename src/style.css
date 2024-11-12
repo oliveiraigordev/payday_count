@@ -69,6 +69,10 @@ button:active {
     background: rgba(0, 0, 0, 0.7);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Botão de voltar */
@@ -121,4 +125,10 @@ body.yellow {
 
 body.red {
     background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(255, 94, 77, 0.8));
+}
+
+/* Estilo para o emoji */
+.emoji {
+    font-size: 80px; /* Ajuste do tamanho do emoji */
+    margin-bottom: 20px;
 }

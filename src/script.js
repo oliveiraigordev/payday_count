@@ -35,18 +35,35 @@ function updateResult(targetDay) {
     // Exibe o botão de voltar
     document.getElementById("backBtn").style.display = "inline-block";
 
+    // Criação do emoji
+    let emoji = '';
+    
+    if (daysLeft === 0) {
+        emoji = '💰';  // Emoji para o dia do evento
+    } else if (daysLeft <= 3) {
+        emoji = '🤑';  // Emoji para menos de 3 dias
+    } else if (daysLeft <= 10) {
+        emoji = '😰';  // Emoji para menos de 10 dias
+    } else if (daysLeft => 20) {
+        emoji = '☠️';  // Emoji para mais de 20 dias
+    }
+
     // Atualiza o fundo da página conforme os dias restantes
-    if (daysLeft < 3) {
+    if (daysLeft <= 3) {
         body.className = 'green';
-    } else if (daysLeft < 10) {
+    } else if (daysLeft <= 10) {
         body.className = 'limegreen';
-    } else if (daysLeft < 20) {
+    } else if (daysLeft <= 20) {
         body.className = 'yellow';
     } else {
         body.className = 'red';
     }
 
-    resultDiv.textContent = `Faltam ${daysLeft} dias para o pagode`;
+    // Atualiza o texto com o emoji centralizado
+    resultDiv.innerHTML = `
+        <div class="emoji">${emoji}</div>
+        <div>${daysLeft === 0 ? 'Façam o pix imediatamente!' : `Faltam ${daysLeft} dias para o próximo evento`}</div>
+    `;
     resultDiv.style.display = "block";
 }
 
