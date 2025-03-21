@@ -62,7 +62,7 @@ function updateResult(targetDay) {
     // Atualiza o texto com o emoji centralizado
     resultDiv.innerHTML = `
         <div class="emoji">${emoji}</div>
-        <div>${daysLeft === 0 ? 'Façam o <s>pix</s> envio de cédulas físicas imediatamente!' : `Faltam ${daysLeft} dias para o pagode`}</div>
+        <div>${daysLeft === 0 ? 'Façam o <s>pix</s> envio de cédulas físicas imediatamente!' : `Teoricamente, faltam ${daysLeft} dias para o pagode. Mas aí tem que ver tbm.`}</div>
     `;
     resultDiv.style.display = "block";
 }
